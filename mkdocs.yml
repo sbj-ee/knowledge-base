@@ -38,8 +38,12 @@ theme:
 
 nav:
   - Home: index.md
-  - Electrical Engineering: ee/index.md
-  - tmux Cheat Sheet: tmux/index.md
+  - Reference:
+      - Electrical Engineering: ee/index.md
+      - tmux Cheat Sheet: tmux/index.md
+  - Network Automation:
+      - Ansible Playbooks: ansible/index.md
+      - NetBox (pynetbox) Examples: netbox/index.md
 
 markdown_extensions:
   - admonition

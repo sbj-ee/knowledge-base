@@ -23,6 +23,8 @@ copy() {  # copy <src-file> <dest-file>
 echo "Syncing knowledge-base content from $SRC"
 copy "EE_Ref/README.md"                       "docs/ee/index.md"
 copy "tmux_cheat_sheet/tmux_cheat_sheet.md"   "docs/tmux/index.md"
+copy "Ansible_Playbooks/README.md"            "docs/ansible/index.md"
+copy "pynetbox_examples/README.md"            "docs/netbox/index.md"
 
 # Rewrite self-referential relative links to absolute GitHub URLs so the
 # strict MkDocs build (used by the deploy workflow) doesn't fail on them.

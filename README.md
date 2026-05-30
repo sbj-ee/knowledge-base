@@ -14,6 +14,8 @@ anything, this site only aggregates content from already-public repos:
 
 - **EE_Ref** (public) → Electrical Engineering reference
 - **tmux_cheat_sheet** (public) → tmux cheat sheet
+- **Ansible_Playbooks** (public) → Ansible playbooks reference
+- **pynetbox_examples** (public) → NetBox automation examples
 
 Private references (e.g. `Notes`, `EE-Book`) are intentionally **excluded**. If you ever
 want those searchable, run MkDocs locally (`mkdocs serve`) and don't deploy them.
@@ -51,7 +53,9 @@ knowledge-base/
 ├── docs/
 │   ├── index.md          # landing page
 │   ├── ee/index.md       # from EE_Ref
-│   └── tmux/index.md     # from tmux_cheat_sheet
+│   ├── tmux/index.md     # from tmux_cheat_sheet
+│   ├── ansible/index.md  # from Ansible_Playbooks
+│   └── netbox/index.md   # from pynetbox_examples
 ├── mkdocs.yml
 ├── requirements.txt
 ├── sync.sh               # re-copy content from source repos
