@@ -1,0 +1,61 @@
+site_name: sbj-ee Knowledge Base
+site_description: Aggregated engineering references — EE and tmux
+site_author: sbj-ee
+# NOTE: update site_url after first deploy (https://sbj-ee.github.io/knowledge-base/)
+site_url: https://sbj-ee.github.io/knowledge-base/
+repo_url: https://github.com/sbj-ee/knowledge-base
+repo_name: sbj-ee/knowledge-base
+copyright: Copyright &copy; sbj-ee
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - Electrical Engineering: ee/index.md
+  - tmux Cheat Sheet: tmux/index.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
