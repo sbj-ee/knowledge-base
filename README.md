@@ -23,11 +23,34 @@ want those searchable, run MkDocs locally (`mkdocs serve`) and don't deploy them
 ## Content flow
 
 Source markdown is copied into `docs/` (this repo is the published artifact, the source
-repos stay authoritative). Re-sync after editing a source repo:
+repos stay authoritative). `sync.sh` works in two modes off one source manifest:
 
 ```bash
-./sync.sh
+./sync.sh                # local: copy from sibling repos under ../
+REMOTE=1 ./sync.sh       # remote: fetch latest from raw.githubusercontent.com
 ```
+
+### Auto-resync
+
+`.github/workflows/resync.yml` keeps the site current automatically. It runs daily (and
+on demand), pulls the latest source content in remote mode, commits any changes back, and
+redeploys. It's self-contained (sync → build → deploy in one job) because a push made with
+the default `GITHUB_TOKEN` does not trigger other workflows.
+
+**Optional — instant updates:** a source repo can notify this one on push instead of
+waiting for the daily run. Add a step to the source repo's workflow:
+
+```yaml
+- name: Notify knowledge-base
+  run: |
+    curl -fsSL -X POST \
+      -H "Authorization: Bearer ${{ secrets.KB_DISPATCH_TOKEN }}" \
+      -H "Accept: application/vnd.github+json" \
+      https://api.github.com/repos/sbj-ee/knowledge-base/dispatches \
+      -d '{"event_type":"source-updated"}'
+```
+
+where `KB_DISPATCH_TOKEN` is a fine-grained PAT with `contents: write` on `knowledge-base`.
 
 ## Local development
 
