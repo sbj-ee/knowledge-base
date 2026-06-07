@@ -60,6 +60,8 @@ done
 # MkDocs build (used by the deploy workflow) doesn't fail on them.
 sed -i 's#](tmux_cheat_sheet\.md)#](https://github.com/sbj-ee/tmux_cheat_sheet/blob/main/tmux_cheat_sheet.md)#g' \
   "$ROOT/docs/tmux/index.md"
+sed -i 's#](EE-Book\.pdf)#](https://github.com/sbj-ee/EE_Ref/blob/main/EE-Book.pdf)#g' \
+  "$ROOT/docs/ee/index.md"
 
 echo "Done. Preview with:  uv run mkdocs serve"
 exit $rc

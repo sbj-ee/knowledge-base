@@ -357,4 +357,4 @@ marimo edit 07_circuit_analysis.py
 
 ## Usage
 
-Download [EE-Book.pdf](EE-Book.pdf) to read the full reference.
+Download [EE-Book.pdf](https://github.com/sbj-ee/EE_Ref/blob/main/EE-Book.pdf) to read the full reference.
