@@ -14,6 +14,12 @@ A searchable reference site aggregating selected public references from
     book — power, communications, semiconductors, control systems, signal processing,
     electromagnetics, and more.
 
+-   :material-language-c: **[C Programming](c/index.md)**
+
+    A structured C programming learning project covering fundamentals through
+    systems programming — types, pointers, memory, concurrency, processes,
+    sockets, and more, with progressive exercises and per-topic reference sheets.
+
 -   :material-console: **[tmux Cheat Sheet](tmux/index.md)**
 
     A comprehensive reference for tmux keyboard shortcuts and commands — sessions,

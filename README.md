@@ -13,6 +13,7 @@ from a private repo (private Pages requires GitHub Enterprise Cloud). To avoid e
 anything, this site only aggregates content from already-public repos:
 
 - **EE_Ref** (public) → Electrical Engineering reference
+- **C_Programming** (public) → C programming reference
 - **tmux_cheat_sheet** (public) → tmux cheat sheet
 - **Ansible_Playbooks** (public) → Ansible playbooks reference
 - **pynetbox_examples** (public) → NetBox automation examples

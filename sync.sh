@@ -23,6 +23,7 @@ REMOTE="${REMOTE:-0}"
 # Source manifest: "repo<TAB>branch<TAB>path-in-repo<TAB>dest-in-docs"
 SOURCES=(
   "EE_Ref	main	README.md	docs/ee/index.md"
+  "C_Programming	main	README.md	docs/c/index.md"
   "tmux_cheat_sheet	main	tmux_cheat_sheet.md	docs/tmux/index.md"
   "Ansible_Playbooks	main	README.md	docs/ansible/index.md"
   "pynetbox_examples	main	README.md	docs/netbox/index.md"
